@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmithGuerrero - Firma Legal</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="css/servicios.css">
+    
+    <!-- Fuentes y Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+       <!-- Encabezado con Logo y Menú -->
+       <header id="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo-container" aria-label="Ir al inicio" title="SmithGuerrero - Firma Legal">
+                <img src="assets/logo.svg" alt="SmithGuerrero Logo" class="logo-img">
+            </a>
+    
+           
+    
+            <!-- Menú de Navegación -->
+            <nav class="navbar">
+                <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <!-- Icono de acceso para abogados -->
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ Sección Hero Profesional -->
+    <section class="hero services-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Protegemos tus derechos, garantizamos justicia</h1>
+            <p>Asesoría legal integral en defensa penal, derecho corporativo y más.</p>
+        </div>
+    </section>
+
+    <!-- ✅ Buscador de Servicios -->
+    <section class="service-filters">
+        <h2>¿En qué podemos ayudarte?</h2>
+        <input type="text" id="searchService" placeholder="🔎 Buscar servicios..." onkeyup="filtrarServicios()">
+    </section>
+
+    <!-- ✅ Sección de Servicios Profesional -->
+<main class="services-container">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <p class="services-description">
+        En <strong>SmithGuerrero</strong>, proporcionamos asesoría legal con un enfoque estratégico, 
+        garantizando soluciones efectivas para individuos y empresas.
+    </p>
+
+    <div class="services-list">
+        <!-- 🔹 Servicio: Defensa Penal -->
+        <article class="service-item" data-aos="fade-up">
+            <div class="service-icon-container">
+                <i class="fas fa-gavel service-icon"></i>
+            </div>
+            <h3>Defensa Penal</h3>
+            <p>Protección legal en procesos judiciales, representación estratégica y defensa robusta.</p>
+            <button class="btn btn-modal-open" data-service="defensaPenal">Más información</button>
+        </article>
+
+        <!-- 🔹 Servicio: Derecho Corporativo -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon-container">
+                <i class="fas fa-building service-icon"></i>
+            </div>
+            <h3>Derecho Corporativo</h3>
+            <p>Asesoramiento en contratos, cumplimiento normativo, fusiones y adquisiciones.</p>
+            <button class="btn btn-modal-open" data-service="derechoCorporativo">Más información</button>
+        </article>
+
+        <!-- 🔹 Servicio: Consultoría Legal -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon-container">
+                <i class="fas fa-balance-scale service-icon"></i>
+            </div>
+            <h3>Consultoría Legal</h3>
+            <p>Estrategias legales adaptadas a las necesidades de cada caso.</p>
+            <button class="btn btn-modal-open" data-service="consultoriaLegal">Más información</button>
+        </article>
+
+        <!-- 🔹 Servicio: Propiedad Intelectual -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon-container">
+                <i class="fas fa-user-shield service-icon"></i>
+            </div>
+            <h3>Propiedad Intelectual</h3>
+            <p>Protección de marcas, patentes y derechos de autor con enfoque experto.</p>
+            <button class="btn btn-modal-open" data-service="propiedadIntelectual">Más información</button>
+        </article>
+
+        <!-- 🔹 Servicio: Mediación y Arbitraje -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon-container">
+                <i class="fas fa-handshake service-icon"></i>
+            </div>
+            <h3>Mediación y Arbitraje</h3>
+            <p>Resolución rápida y efectiva de conflictos legales fuera de tribunales.</p>
+            <button class="btn btn-modal-open" data-service="mediacionArbitraje">Más información</button>
+        </article>
+
+        <!-- 🔹 Servicio: Contratos y Negociaciones -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon-container">
+                <i class="fas fa-file-contract service-icon"></i>
+            </div>
+            <h3>Contratos y Negociaciones</h3>
+            <p>Redacción y revisión de contratos comerciales y laborales con asesoría legal.</p>
+            <button class="btn btn-modal-open" data-service="contratosNegociaciones">Más información</button>
+        </article>
+
+        <!-- 🔹 Servicio: Protección de Datos -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-icon-container">
+                <i class="fas fa-user-shield service-icon"></i>
+            </div>
+            <h3>Protección de Datos</h3>
+            <p>Seguridad jurídica en tratamiento de datos y cumplimiento normativo.</p>
+            <button class="btn btn-modal-open" data-service="proteccionDatos">Más información</button>
+        </article>
+    </div>
+
+    <!-- 🔹 Botón CTA General -->
+    <div class="service-cta">
+        <a href="contacto.html" class="btn btn-large">Agenda tu consulta</a>
+    </div>
+</main>
+
+<!-- ✅ Modales de Servicios Mejorados -->
+<div id="modals-container">
+
+    <!-- 🔹 MODAL: Defensa Penal -->
+    <div id="modal-defensaPenal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-gavel modal-icon"></i>
+                <h2>Defensa Penal</h2>
+            </div>
+            <p>Nos especializamos en la protección legal en casos penales, asegurando una estrategia de defensa firme y efectiva.</p>
+            
+            <h3>💡 ¿Por qué elegirnos?</h3>
+            <ul>
+                <li>✅ Representación en todo tipo de procesos judiciales.</li>
+                <li>✅ Defensa estratégica y personalizada.</li>
+                <li>✅ Atención 24/7 en casos urgentes.</li>
+            </ul>
+
+            <a href="contacto.html" class="btn cta-btn">📞 Agenda tu consulta</a>
+        </div>
+    </div>
+
+    <!-- 🔹 MODAL: Derecho Corporativo -->
+    <div id="modal-derechoCorporativo" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-building modal-icon"></i>
+                <h2>Derecho Corporativo</h2>
+            </div>
+            <p>Asesoría legal para empresas, garantizando cumplimiento normativo y seguridad jurídica en operaciones comerciales.</p>
+            
+            <h3>💼 Servicios Destacados</h3>
+            <ul>
+                <li>📌 Creación y constitución de empresas.</li>
+                <li>📌 Redacción y revisión de contratos corporativos.</li>
+                <li>📌 Asesoría en fusiones y adquisiciones.</li>
+            </ul>
+
+            <a href="contacto.html" class="btn cta-btn">📞 Consulta a un experto</a>
+        </div>
+    </div>
+
+    <!-- 🔹 MODAL: Consultoría Legal -->
+    <div id="modal-consultoriaLegal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-balance-scale modal-icon"></i>
+                <h2>Consultoría Legal</h2>
+            </div>
+            <p>Soluciones jurídicas personalizadas para empresas y particulares, asegurando estrategias eficaces para cada caso.</p>
+
+            <h3>🔍 Áreas de Especialización</h3>
+            <ul>
+                <li>⚖️ Litigios y resolución de disputas.</li>
+                <li>⚖️ Protección contra riesgos legales.</li>
+                <li>⚖️ Cumplimiento normativo y auditoría legal.</li>
+            </ul>
+
+            <a href="contacto.html" class="btn cta-btn">📞 Consulta con un abogado</a>
+        </div>
+    </div>
+
+    <!-- 🔹 MODAL: Propiedad Intelectual -->
+    <div id="modal-propiedadIntelectual" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-user-shield modal-icon"></i>
+                <h2>Propiedad Intelectual</h2>
+            </div>
+            <p>Protección integral de tus marcas, patentes y derechos de autor para asegurar tu innovación.</p>
+
+            <h3>📜 ¿Qué incluye?</h3>
+            <ul>
+                <li>🔹 Registro y defensa de marcas.</li>
+                <li>🔹 Asesoría en derechos de autor y patentes.</li>
+                <li>🔹 Litigios por uso indebido de propiedad intelectual.</li>
+            </ul>
+
+            <a href="contacto.html" class="btn cta-btn">📞 Protege tu marca</a>
+        </div>
+    </div>
+
+    <!-- 🔹 MODAL: Mediación y Arbitraje -->
+    <div id="modal-mediacionArbitraje" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-handshake modal-icon"></i>
+                <h2>Mediación y Arbitraje</h2>
+            </div>
+            <p>Soluciones extrajudiciales para resolver conflictos legales de manera rápida y efectiva.</p>
+
+            <h3>⚖️ Beneficios de la Mediación</h3>
+            <ul>
+                <li>✔️ Resolución más rápida que un juicio.</li>
+                <li>✔️ Costos reducidos en comparación con litigios.</li>
+                <li>✔️ Mayor control en la toma de decisiones.</li>
+            </ul>
+
+            <a href="contacto.html" class="btn cta-btn">📞 Asesoría en resolución de conflictos</a>
+        </div>
+    </div>
+
+    <!-- 🔹 MODAL: Contratos y Negociaciones -->
+    <div id="modal-contratosNegociaciones" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-file-contract modal-icon"></i>
+                <h2>Contratos y Negociaciones</h2>
+            </div>
+            <p>Redacción, revisión y negociación de contratos comerciales y laborales con total seguridad jurídica.</p>
+
+            <h3>📑 Servicios Ofrecidos</h3>
+            <ul>
+                <li>✍️ Creación de contratos comerciales.</li>
+                <li>✍️ Evaluación y asesoría en negociaciones.</li>
+                <li>✍️ Prevención de riesgos legales.</li>
+            </ul>
+
+            <a href="contacto.html" class="btn cta-btn">📞 Protege tus acuerdos</a>
+        </div>
+    </div>
+
+    <!-- 🔹 MODAL: Protección de Datos -->
+    <div id="modal-proteccionDatos" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-user-shield modal-icon"></i>
+                <h2>Protección de Datos</h2>
+            </div>
+            <p>Garantiza el cumplimiento normativo y la seguridad de la información personal y empresarial.</p>
+
+            <h3>🔐 Aspectos Claves</h3>
+            <ul>
+                <li>🔏 Cumplimiento de normativas de privacidad.</li>
+                <li>🔏 Auditorías de seguridad de datos.</li>
+                <li>🔏 Prevención de riesgos y sanciones legales.</li>
+            </ul>
+
+            <a href="contacto.html" class="btn cta-btn">📞 Consulta con un experto</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+  
+
+  <article class="tweet-card" role="article" aria-label="Publicación de Juan Pérez">
+    <header class="tweet-header">
+      <img src="assets/logo.png" alt="Foto de perfil de Juan Pérez" class="profile-img">
+      <div>
+        <strong class="user-name">smithguerrero</strong>
+        <span class="user-handle">@smithguerrero</span>
+      </div>
+    </header>
+    
+    <p class="tweet-content">
+        Cada acusación es un reto, cada derecho una defensa. En SmithGuerrero convertimos la incertidumbre en protección sólida. ¡Tu libertad es lo primero!”
+
+        #DerechoPenal #DefensaPenal #Justicia
+    </p>
+    
+    <footer class="tweet-footer">
+      <time datetime="2025-03-25T10:45">10:45 AM · 25 mar 2025</time>
+      <div class="tweet-actions" aria-label="Acciones">
+        <button aria-label="Responder (12)">
+          <i class="fas fa-comment"></i>12
+        </button>
+        <button aria-label="Retweet (30)">
+          <i class="fas fa-retweet"></i>30
+        </button>
+        <button aria-label="Me gusta (105)">
+          <i class="fas fa-heart"></i>105
+        </button>
+      </div>
+    </footer>
+  </article>
+  
+
+
+
+  <section class="cta">
+    <h2>Asegura tu tranquilidad legal hoy</h2>
+    <p>Permite que nuestros expertos te brinden asesoría personalizada y protejan lo que más valoras. En SmithGuerrero, unimos experiencia y compromiso para ofrecer soluciones reales.</p>
+  
+    <ul class="cta-highlights">
+      <li>Atención 100% personalizada y cercana</li>
+      <li>Amplia experiencia en diversas áreas legales</li>
+      <li>Transparencia y confidencialidad garantizadas</li>
+    </ul>
+  
+    <a href="contacto.html" class="btn cta-btn">Contáctanos Ahora</a>
+  
+    <div class="cta-disclaimer">
+      <p><strong>¿Necesitas asesoría urgente?</strong> Llama al <a href="tel:+11234567890">+57 (300) 348 2107</a> o contáctanos vía WhatsApp para una respuesta inmediata.</p>
+    </div>
+  </section>
+  
+
+ <!-- ✅ Footer Profesional Mejorado -->
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- 📖 Sección Acerca de Nosotros -->
+        <div class="footer-about">
+            <h4>📚 QUIÉNES SOMOS</h4>
+            <p>SmithGuerrero es una firma legal comprometida con la transparencia, la integridad y la excelencia. Brindamos soluciones jurídicas adaptadas a cada cliente con asesoramiento experto.</p>
+        </div>
+
+        <!-- 🔍 Sección de Enlaces -->
+        <nav class="footer-links">
+            <h4>🔗 EXPLORA</h4>
+            <ul>
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="servicios.html">⚖️ Servicios</a></li>
+                <li><a href="blog.html">📝 Blog</a></li>
+                <li><a href="contacto.html">📞 Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- 📬 Sección de Contacto -->
+        <div class="footer-contact">
+            <h4>📩 CONTÁCTANOS</h4>
+            <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> +57 (300) 348-2107</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:smithguerrero.legal@gmail.com">smithguerrero.legal@gmail.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Cra. 7 #No. 1N - 28, Edificio Edgar Negret, Popayán, Cauca</p>
+            
+        </div>
+
+        <!-- 🌍 Sección de Redes Sociales -->
+        <div class="footer-socials">
+            <h4>🌐 CONECTA CON NOSOTROS</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📜 Sección de Derechos y Políticas -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 SmithGuerrero. Todos los derechos reservados.</p>
+        <p><a href="#">📑 Política de Privacidad</a> | <a href="#">📜 Términos de Uso</a></p>
+    </div>
+
+    <!-- 🔝 Botón Flotante para Subir al Inicio -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Subir al inicio">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+</footer>
+
+    
+    <script src="js/servicios.js"></script>
+</body>
+</html>

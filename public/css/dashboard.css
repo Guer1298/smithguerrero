@@ -1,0 +1,249 @@
+/* ---------------- GENERAL ---------------- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #F4F7FC;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* ---------------- SIDEBAR (MENÚ LATERAL) ---------------- */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #2C3E50;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background: #34495E;
+}
+
+/* ---------------- CONTENIDO PRINCIPAL ---------------- */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* ---------------- HEADER ---------------- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+/* ---------------- TARJETAS DE ESTADÍSTICAS ---------------- */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+    font-size: 20px;
+    color: #2C3E50;
+}
+
+.stat-card p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ---------------- SECCIONES (MEJOR ORGANIZADAS) ---------------- */
+.section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+/* ---------------- TABLAS (DISEÑO MEJORADO) ---------------- */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #2C3E50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* ---------------- BOTONES ---------------- */
+.btn {
+    background: #2C3E50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #34495E;
+}
+
+/* ---------------- RESPONSIVIDAD ---------------- */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        overflow: hidden;
+    }
+
+    .sidebar ul li a {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main-content {
+        margin-left: 70px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.logout {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logout a {
+    color: #E74C3C;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+.logout a i {
+    margin-right: 10px;
+}
+
+.logout a:hover {
+    background: rgba(231, 76, 60, 0.2);
+}
+

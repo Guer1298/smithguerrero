@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - SmithGuerrero</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Encabezado con Logo y Menú -->
+    <header id="main-header">
+        <div class="header-container">
+            
+            <!-- Logo con Valor Agregado -->
+        <div class="logo-container" aria-label="Ir al inicio" title="SmithGuerrero - Firma Legal">
+            <a href="index.html" class="logo-link" aria-label="Ir al inicio">
+                <img
+                  src="assets/logo.svg"
+                  alt="Logotipo de SmithGuerrero - Firma Legal"
+                  class="logo-img"
+                >
+              </a>
+            <p class="logo-tagline">Tú escudo juridico</p>
+        </div>
+  
+    
+           
+    
+            <!-- Menú de Navegación -->
+            <nav class="navbar">
+                <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+               
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ Hero de Contacto Mejorado -->
+    <section class="hero contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>📞 Hablemos sobre tu caso</h1>
+            <p>Recibe asesoramiento legal de expertos en menos de 24 horas.</p>
+        </div>
+    </section>
+
+    <!-- ✅ Sección de Contacto Mejorada -->
+<main class="contact-container">
+    <!-- ✅ Formulario de Contacto -->
+    <div class="contact-form-container">
+        <h2>✉️ Contáctanos</h2>
+        <p>Déjanos tu mensaje y nuestro equipo se comunicará contigo lo antes posible.</p>
+        <form id="contact-form">
+            <div class="input-group">
+                <label for="name"><i class="fas fa-user"></i></label>
+                <input type="text" id="name" placeholder="Nombre completo" required>
+            </div>
+            <div class="input-group">
+                <label for="email"><i class="fas fa-envelope"></i></label>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="input-group">
+                <label for="phone"><i class="fas fa-phone"></i></label>
+                <input type="tel" id="phone" placeholder="Teléfono (opcional)">
+            </div>
+            <div class="input-group">
+                <label for="motivo"><i class="fas fa-list-alt"></i></label>
+                <select id="motivo" required>
+                    <option value="" disabled selected>Selecciona el motivo de tu consulta</option>
+                    <option value="defensa">Defensa Penal</option>
+                    <option value="corporativo">Derecho Corporativo</option>
+                    <option value="contratos">Revisión de Contratos</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="message"><i class="fas fa-comment-dots"></i></label>
+                <textarea id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </div>
+
+    <!-- ✅ Información de Contacto -->
+    <div class="contact-info">
+        <h2>📍 Información de Contacto</h2>
+        <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:+573003482107">+57 300 348 2107</a></p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:smithguerrero.legal@gmail.com">smithguerrero.legal@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Cra. 7 #No. 1N - 28, Edificio Edgar Negret, Popayán, Cauca</p>
+        <a href="https://wa.me/573003482107" class="btn whatsapp">
+            <i class="fab fa-whatsapp"></i> Chatear por WhatsApp
+        </a>
+    </div>
+</main>
+
+
+    <!-- ✅ Sección de Preguntas Frecuentes Mejorada -->
+<section class="faq">
+    <h2>🤔 Preguntas Frecuentes</h2>
+    <p class="faq-description">Aquí encontrarás respuestas a las dudas más comunes sobre nuestros servicios.</p>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                📅 ¿Cómo agendar una consulta? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                Puedes contactarnos a través del formulario, WhatsApp o llamarnos directamente para agendar una cita con nuestros abogados especializados.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                ⏳ ¿Cuánto tiempo tarda en responder su equipo? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                Nos comprometemos a responder en un plazo máximo de 24 horas hábiles. Para consultas urgentes, recomendamos contactarnos vía WhatsApp.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                💻 ¿Brindan asesoramiento en línea? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                Sí, ofrecemos consultas virtuales a través de videollamada para garantizar comodidad y accesibilidad a nuestros clientes.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                📝 ¿Cuáles son los requisitos para una consulta legal? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                Para programar una consulta, solo necesitas brindarnos un resumen de tu caso y tu información de contacto. Si tienes documentos relevantes, puedes enviarlos previamente para optimizar la asesoría.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- ✅ Botón Flotante de WhatsApp Mejorado -->
+        <a href="https://wa.me/573003482107" 
+        class="whatsapp-floating" 
+        target="_blank" 
+        aria-label="Chatea con nosotros en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        </a>
+
+
+   <!-- ✅ Footer Profesional Mejorado -->
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- 📖 Sección Acerca de Nosotros -->
+        <div class="footer-about">
+            <h4>📚 QUIÉNES SOMOS</h4>
+            <p>SmithGuerrero es una firma legal comprometida con la transparencia, la integridad y la excelencia. Brindamos soluciones jurídicas adaptadas a cada cliente con asesoramiento experto.</p>
+        </div>
+
+        <!-- 🔍 Sección de Enlaces -->
+        <nav class="footer-links">
+            <h4>🔗 EXPLORA</h4>
+            <ul>
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="servicios.html">⚖️ Servicios</a></li>
+                <li><a href="blog.html">📝 Blog</a></li>
+                <li><a href="contacto.html">📞 Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- 📬 Sección de Contacto -->
+        <div class="footer-contact">
+            <h4>📩 CONTÁCTANOS</h4>
+            <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> +57 (300) 348-2107</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:smithguerrero.legal@gmail.com">smithguerrero.legal@gmail.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Cra. 7 #No. 1N - 28, Edificio Edgar Negret, Popayán, Cauca</p>
+            
+        </div>
+
+        <!-- 🌍 Sección de Redes Sociales -->
+        <div class="footer-socials">
+            <h4>🌐 CONECTA CON NOSOTROS</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📜 Sección de Derechos y Políticas -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 SmithGuerrero. Todos los derechos reservados.</p>
+        <p><a href="#">📑 Política de Privacidad</a> | <a href="#">📜 Términos de Uso</a></p>
+    </div>
+
+    <!-- 🔝 Botón Flotante para Subir al Inicio -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Subir al inicio">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+</footer>
+
+
+
+    <script src="js/ui.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,110 @@
+/* Estilos Base */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #C9A86A, #A07B40);
+}
+
+.login-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #C9A86A;
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    font-size: 16px;
+    color: #888;
+    cursor: pointer;
+}
+
+.terms {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.terms a {
+    color: #C9A86A;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #C9A86A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #A07B40;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.back-to-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #C9A86A;
+}
+
+.back-to-home i {
+    margin-right: 5px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - SmithGuerrero</title>
+    <meta name="description" content="Descubre las últimas tendencias en derecho penal y corporativo. Consejos y noticias legales para proteger tu negocio y derechos.">
+    <meta name="keywords" content="derecho penal, asesoría legal, abogados, derecho corporativo, contratos">
+    <meta name="author" content="SmithGuerrero">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="css/blog.css">
+    
+    <!-- Fuentes y Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- JS Diferido para Mejor Rendimiento -->
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- Encabezado con Logo y Menú -->
+    <header id="main-header">
+        <div class="header-container">
+            
+            <!-- Logo con Valor Agregado -->
+        <div class="logo-container" aria-label="Ir al inicio" title="SmithGuerrero - Firma Legal">
+            <a href="index.html" class="logo-link" aria-label="Ir al inicio">
+                <img
+                  src="assets/logo.svg"
+                  alt="Logotipo de SmithGuerrero - Firma Legal"
+                  class="logo-img"
+                >
+              </a>
+            <p class="logo-tagline">Tú escudo juridico</p>
+        </div>
+  
+    
+           
+    
+            <!-- Menú de Navegación -->
+            <nav class="navbar">
+                <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero del Blog -->
+    <section class="hero blog-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Explora Nuestro Blog Legal</h1>
+            <p>Conoce las últimas novedades y consejos legales.</p>
+        </div>
+    </section>
+
+    <!-- Búsqueda y Categorías -->
+    <section class="blog-search">
+        <input type="text" id="search-blog" placeholder="Buscar artículos..." onkeyup="filtrarArticulos()" aria-label="Buscar artículos">
+        <select id="filter-category" onchange="filtrarCategoria()" aria-label="Filtrar por categoría">
+            <option value="all">Todas las categorías</option>
+            <option value="penal">Derecho Penal</option>
+            <option value="corporativo">Derecho Corporativo</option>
+            <option value="contratos">Contratos y Empresas</option>
+        </select>
+    </section>
+
+    <!-- Contenedor Principal del Blog -->
+    <main class="blog-container">
+        <h2>Últimos Artículos</h2>
+        <p class="blog-description">Mantente al día con las noticias, consejos y análisis de expertos en derecho.</p>
+
+        <!-- ✅ Sección Blog Mejorada con enlaces a artículos -->
+<section id="blog" class="section">
+    <div class="blog-container">
+        <h2>Nuestro Blog</h2>
+        <p class="blog-description">
+            Mantente informado con las últimas novedades en derecho penal, corporativo y consultoría legal.
+        </p>
+
+        <div class="blog-list">
+            <article class="blog-post" data-aos="fade-up">
+                <div class="blog-image">
+                    <img src="assets/derecho_penal.webp" alt="Últimas tendencias en derecho penal">
+                </div>
+                <div class="blog-content">
+                    <h3>🔎 Últimas tendencias en derecho penal</h3>
+                    <p>Conoce las novedades y cambios en la legislación penal que podrían afectar tus derechos.</p>
+                    <a href="blogs/blog-tendencia.html" class="btn">📖 Leer más</a>
+                </div>
+            </article>
+
+            <article class="blog-post" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/4064835/pexels-photo-4064835.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Consejos legales para empresas emergentes">
+                </div>
+                <div class="blog-content">
+                    <h3>🚀 Consejos legales para empresas emergentes</h3>
+                    <p>Protege tu negocio desde sus primeros pasos con asesoría estratégica en derecho corporativo.</p>
+                    <a href="blogs/blog-empresa.html" class="btn">📖 Leer más</a>
+                </div>
+            </article>
+
+            <article class="blog-post" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/261679/pexels-photo-261679.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cómo redactar contratos sin riesgos">
+                </div>
+                <div class="blog-content">
+                    <h3>📝 Cómo redactar contratos sin riesgos</h3>
+                    <p>Evita problemas legales con nuestros consejos expertos en contratos empresariales.</p>
+                    <a href="blogs/blog-contrato.html" class="btn">📖 Leer más</a>
+                </div>
+            </article>
+
+            <article class="blog-post" data-aos="fade-up" data-aos-delay="300">
+                <div class="blog-image">
+                    <img src="https://images.pexels.com/photos/15847154/pexels-photo-15847154/free-photo-of-panorama-urbano-skyline-verano-rascacielos.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Casos jurídicos emblemáticos en Colombia">
+                </div>
+                <div class="blog-content">
+                    <h3>⚖️ Casos jurídicos emblemáticos en Colombia</h3>
+                    <p>Descubre los casos legales que han marcado la historia y la jurisprudencia en el país.</p>
+                    <a href="blogs/blog-casos.html" class="btn">📖 Leer más</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- 🔹 Botón CTA para Ver Más Artículos -->
+        <div class="blog-action">
+            <a href="blog.html" class="btn btn-large">📰 Explorar más artículos</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- ✅ Sección de Suscripción al Blog Mejorada -->
+<section class="subscribe">
+    <div class="subscribe-container">
+        <h2>📩 Suscríbete y mantente informado</h2>
+        <p>Recibe noticias, tendencias y consejos legales exclusivos directamente en tu bandeja de entrada.</p>
+        <form id="subscribe-form">
+            <div class="input-group">
+                <input type="email" id="email-subscribe" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn">Suscribirme</button>
+            </div>
+            <p class="subscribe-note">🔒 No enviamos spam. Puedes darte de baja en cualquier momento.</p>
+        </form>
+    </div>
+</section>
+
+<!-- ✅ Sección de Comentarios Mejorada -->
+<section class="blog-comments">
+    <div class="comments-container">
+        <h2>💬 Comparte tu opinión</h2>
+        <p>Tu voz es importante. Déjanos un comentario y únete a la conversación.</p>
+        <form id="comment-form">
+            <textarea id="comment-text" placeholder="Escribe tu comentario..." aria-label="Escribe tu comentario" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+        <div class="comments-list">
+            <h3>🗨️ Comentarios recientes</h3>
+            <p><strong>Juan Pérez:</strong> Excelente artículo, muy informativo.</p>
+            <p><strong>María Gómez:</strong> Me gustaría conocer más sobre derecho corporativo.</p>
+        </div>
+    </div>
+</section>
+
+
+   <!-- ✅ Footer Profesional Mejorado -->
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- 📖 Sección Acerca de Nosotros -->
+        <div class="footer-about">
+            <h4>📚 QUIÉNES SOMOS</h4>
+            <p>SmithGuerrero es una firma legal comprometida con la transparencia, la integridad y la excelencia. Brindamos soluciones jurídicas adaptadas a cada cliente con asesoramiento experto.</p>
+        </div>
+
+        <!-- 🔍 Sección de Enlaces -->
+        <nav class="footer-links">
+            <h4>🔗 EXPLORA</h4>
+            <ul>
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="servicios.html">⚖️ Servicios</a></li>
+                <li><a href="blog.html">📝 Blog</a></li>
+                <li><a href="contacto.html">📞 Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- 📬 Sección de Contacto -->
+        <div class="footer-contact">
+            <h4>📩 CONTÁCTANOS</h4>
+            <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> +57 (300) 348-2107</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:smithguerrero.legal@gmail.com">smithguerrero.legal@gmail.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Cra. 7 #No. 1N - 28, Edificio Edgar Negret, Popayán, Cauca</p>
+            
+        </div>
+
+        <!-- 🌍 Sección de Redes Sociales -->
+        <div class="footer-socials">
+            <h4>🌐 CONECTA CON NOSOTROS</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📜 Sección de Derechos y Políticas -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 SmithGuerrero. Todos los derechos reservados.</p>
+        <p><a href="#">📑 Política de Privacidad</a> | <a href="#">📜 Términos de Uso</a></p>
+    </div>
+
+    <!-- 🔝 Botón Flotante para Subir al Inicio -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Subir al inicio">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+</footer>
+
+    <script src="js/blog.js"></script>
+
+</body>
+</html>
+
+
