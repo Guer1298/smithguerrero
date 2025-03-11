@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - SmithGuerrero CRM</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro</h2>
+        <form id="registerForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Correo Electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <select id="rol">
+                <option value="administrador">Administrador</option>
+                <option value="abogado">Abogado</option>
+                <option value="asistente">Asistente</option>
+                <option value="cliente">Cliente</option>
+            </select>
+            <button type="submit">Registrar</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+        <p id="error-message" class="error-message"></p>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

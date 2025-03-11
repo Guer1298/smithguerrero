@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Casos - SmithGuerrero</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/casos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar de Navegación -->
+        <nav class="sidebar">
+            <h2>⚖️ SmithGuerrero CRM</h2>
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-folder-open"></i> Casos</a></li>
+                <li><a href="clientes.html"><i class="fas fa-user-tie"></i> Clientes</a></li>
+                <li><a href="citas.html"><i class="fas fa-calendar-alt"></i> Citas</a></li>
+                <li><a href="finanzas.html"><i class="fas fa-chart-line"></i> Finanzas</a></li>
+                <li><a href="configuracion.html"><i class="fas fa-cogs"></i> Configuración</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <header class="dashboard-header">
+                <h1>📂 Gestión de Casos</h1>
+                <div class="actions">
+                    <input type="text" id="searchCase" placeholder="🔍 Buscar caso...">
+                    <select id="filterStatus">
+                        <option value="">📌 Estado</option>
+                        <option value="abierto">🟢 Abierto</option>
+                        <option value="negociacion">🟡 Negociación</option>
+                        <option value="corte">⚖️ En Corte</option>
+                        <option value="cerrado">🔴 Cerrado</option>
+                    </select>
+                    <button id="addCase"><i class="fas fa-plus"></i> Nuevo Caso</button>
+                </div>
+            </header>
+
+            <!-- 📂 Tabla de Casos con Paginación -->
+            <section class="case-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>📜 Expediente</th>
+                            <th>👤 Cliente</th>
+                            <th>⚖️ Tipo</th>
+                            <th>👨‍⚖️ Abogado</th>
+                            <th>📌 Estado</th>
+                            <th>📅 Fecha Creación</th>
+                            <th>⏳ Plazos</th>
+                            <th>📁 Documentos</th>
+                            <th>🛠 Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="casesTable"></tbody>
+                </table>
+                <div class="pagination">
+                    <button id="prevPage">⬅️</button>
+                    <span id="pageNumber">1</span>
+                    <button id="nextPage">➡️</button>
+                </div>
+            </section>
+
+            <!-- 📄 Gestión Documental con Asociación a Clientes -->
+            <section class="document-management">
+                <h2>📄 Documentos Asociados</h2>
+
+                <!-- 📌 Seleccionar Cliente -->
+                <label for="selectClient">👤 Cliente:</label>
+                <select id="selectClient">
+                    <option value="">Seleccione un cliente</option>
+                    <!-- 🔄 Opciones cargadas dinámicamente -->
+                </select>
+
+                <!-- 📤 Subida de Documentos -->
+                <div class="upload-container">
+                    <label for="uploadDocument" class="drag-drop">
+                        <i class="fas fa-cloud-upload-alt"></i> Arrastra y suelta archivos aquí o <span>haz clic para subir</span>
+                    </label>
+                    <input type="file" id="uploadDocument" multiple hidden>
+                    <button id="uploadBtn">📤 Subir Documentos</button>
+                </div>
+
+                <!-- 📋 Lista de Documentos -->
+                <table class="document-table">
+                    <thead>
+                        <tr>
+                            <th>📁 Nombre</th>
+                            <th>📄 Tipo</th>
+                            <th>📅 Fecha</th>
+                            <th>👤 Cliente</th>
+                            <th>🛠 Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="documentList">
+                        <!-- 🔄 Datos dinámicos cargados aquí -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 📊 Línea de Tiempo Interactiva -->
+            <section class="case-timeline">
+                <h2>📊 Seguimiento del Caso</h2>
+                <div id="timeline"></div>
+            </section>
+
+            <!-- 📅 Integración con Google Calendar -->
+            <section class="calendar">
+                <h2>📅 Fechas Importantes</h2>
+                <button id="syncGoogleCalendar">🔗 Sincronizar con Google Calendar</button>
+                <div id="calendar"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/casos.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes - SmithGuerrero</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/clientes.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar de Navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚖️ SmithGuerrero CRM</h2>
+                <button class="close-sidebar"><i class="fas fa-times"></i></button>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fas fa-folder-open"></i> Casos</a></li>
+                <li class="active"><a href="clientes.html"><i class="fas fa-user-tie"></i> Clientes</a></li>
+                <li><a href="citas.html"><i class="fas fa-calendar-alt"></i> Citas</a></li>
+                <li><a href="finanzas.html"><i class="fas fa-chart-line"></i> Finanzas</a></li>
+                <li><a href="configuracion.html"><i class="fas fa-cogs"></i> Configuración</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <header class="dashboard-header">
+                <h1>👨‍💼 Gestión de Clientes</h1>
+                <div class="user-info">
+                    <button class="user-btn">
+                        <i class="fas fa-user-circle"></i> Abogado Juan <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="btn-logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+                </div>
+            </header>
+
+            <!-- Barra de Herramientas -->
+            <section class="toolbar">
+                <input type="text" id="buscarCliente" placeholder="🔍 Buscar cliente..." onkeyup="filtrarClientes()">
+                <select id="filtroEstado">
+                    <option value="">Estado</option>
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+                <button id="addCliente"><i class="fas fa-user-plus"></i> Nuevo Cliente</button>
+            </section>
+
+            <!-- Tabla de Clientes -->
+            <section class="client-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientesTable"></tbody>
+                </table>
+            </section>
+
+            <!-- Modal para Agregar/Editar Cliente -->
+            <div id="clienteModal" class="modal">
+                <div class="modal-content">
+                    <h3 id="modalTitle">Agregar Cliente</h3>
+                    <input type="hidden" id="clienteId">
+                    <input type="text" id="clienteNombre" placeholder="Nombre" required>
+                    <input type="email" id="clienteEmail" placeholder="Email" required>
+                    <input type="tel" id="clienteTelefono" placeholder="Teléfono" required>
+                    <select id="clienteEstado">
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                    </select>
+                    <button id="guardarCliente">Guardar</button>
+                    <button class="close-modal">Cancelar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/clientes.js"></script>
+</body>
+</html>
+
+

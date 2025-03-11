@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - SmithGuerrero CRM</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/configuracion.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar de Navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚖️ SmithGuerrero CRM</h2>
+                <button class="close-sidebar"><i class="fas fa-times"></i></button>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fas fa-folder-open"></i> Casos</a></li>
+                <li><a href="clientes.html"><i class="fas fa-user-tie"></i> Clientes</a></li>
+                <li><a href="citas.html"><i class="fas fa-calendar-alt"></i> Citas</a></li>
+                <li><a href="finanzas.html"><i class="fas fa-chart-line"></i> Finanzas</a></li>
+                <li class="active"><a href="configuracion.html"><i class="fas fa-cogs"></i> Configuración</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <header class="dashboard-header">
+                <h1>⚙️ Configuración del Sistema</h1>
+            </header>
+
+            <!-- 🔧 Sección de Configuración -->
+            <section class="config-section">
+                <h2>🔐 Administración de Usuarios</h2>
+                <div class="config-group">
+                    <label for="selectRol">Seleccionar Rol:</label>
+                    <select id="selectRol">
+                        <option value="admin">Administrador</option>
+                        <option value="abogado">Abogado</option>
+                        <option value="cliente">Cliente</option>
+                    </select>
+                    <button id="guardarConfig" class="btn-primary">Guardar Cambios</button>
+                </div>
+            </section>
+
+            <section class="config-section">
+                <h2>🔔 Notificaciones</h2>
+                <div class="config-group">
+                    <label for="notificaciones">Activar Notificaciones:</label>
+                    <input type="checkbox" id="notificaciones">
+                </div>
+            </section>
+
+            <section class="config-section">
+                <h2>🎨 Personalización</h2>
+                <div class="config-group">
+                    <label for="tema">Modo Oscuro:</label>
+                    <input type="checkbox" id="temaOscuro">
+                </div>
+            </section>
+
+            <!-- Modal de Confirmación -->
+            <div id="configModal" class="modal">
+                <div class="modal-content">
+                    <h3>¿Confirmar cambios?</h3>
+                    <p>Se guardarán las configuraciones en el sistema.</p>
+                    <button id="confirmarGuardado" class="btn-primary">Confirmar</button>
+                    <button class="close-modal">Cancelar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/configuracion.js"></script>
+</body>
+</html>

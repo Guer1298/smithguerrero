@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Citas - SmithGuerrero CRM</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/citas.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar de Navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚖️ SmithGuerrero CRM</h2>
+                <button class="close-sidebar"><i class="fas fa-times"></i></button>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fas fa-folder-open"></i> Casos</a></li>
+                <li><a href="clientes.html"><i class="fas fa-user-tie"></i> Clientes</a></li>
+                <li class="active"><a href="citas.html"><i class="fas fa-calendar-alt"></i> Citas</a></li>
+                <li><a href="finanzas.html"><i class="fas fa-chart-line"></i> Finanzas</a></li>
+                <li><a href="configuracion.html"><i class="fas fa-cogs"></i> Configuración</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <header class="dashboard-header">
+                <h1>📅 Gestión de Citas</h1>
+                <div class="user-info">
+                    <button class="user-btn">
+                        <i class="fas fa-user-circle"></i> Abogado Juan <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="btn-logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+                </div>
+            </header>
+
+            <!-- Barra de Herramientas -->
+            <section class="toolbar">
+                <button id="addCita" class="btn-primary"><i class="fas fa-plus-circle"></i> Nueva Cita</button>
+            </section>
+
+            <!-- 📅 Calendario de Citas -->
+            <section class="calendar-section">
+                <div id="calendar"></div>
+            </section>
+
+            <!-- 📝 Modal para Agendar Cita -->
+            <div id="citaModal" class="modal">
+                <div class="modal-content">
+                    <h3>📅 Agendar Cita</h3>
+                    <label>Cliente:</label>
+                    <input type="text" id="clienteCita" placeholder="Nombre del Cliente" required>
+                    
+                    <label>Fecha y Hora:</label>
+                    <input type="datetime-local" id="fechaCita" required>
+                    
+                    <label>Notas:</label>
+                    <textarea id="notasCita" placeholder="Detalles adicionales..."></textarea>
+
+                    <button id="guardarCita" class="btn-success">Guardar Cita</button>
+                    <button class="close-modal btn-danger">Cancelar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/citas.js"></script>
+</body>
+</html>
